@@ -41,18 +41,41 @@ func CheckTaskInput() {
 		fmt.Println(Green + "Task Help" + Reset + " » " + Blue + "task edit <Task>" + " - Edit task" + Reset)
 		//fmt.Println(Green+"task done"+Reset+" - Mark task as done")
 		//fmt.Println(Green+"task undone"+Reset+" - Mark task as undone")
-		fmt.Println(Green + "task info <Task>" + Reset + " - Show task info")
-		fmt.Println(Green + "task info all" + Reset + " - Show all tasks info")
-		fmt.Println(Green + "task start <Task>" + Reset + " - Start task")
-		fmt.Println(Green + "task start all" + Reset + " - Starts all tasks")
-		fmt.Println(Green + "task stop all" + Reset + " - Stops all tasks")
-		fmt.Println(Green + "task stop <Task>" + Reset + " - Stop task")
-	case "your name":
-		name, _ := getInput(">>", reader)
-		name1 := name
-		fmt.Println(name1)
+		fmt.Println(Green + "Task Help" + Reset + " » " + Blue + "task info <Task>" + Reset + " - Show task info" + Reset)
+		fmt.Println(Green + "Task Help" + Reset + " » " + Blue + "task info all" + Reset + " - Show all tasks info" + Reset)
+		fmt.Println(Green + "Task Help" + Reset + " » " + Blue + "task start <Task>" + Reset + " - Start task" + Reset)
+		fmt.Println(Green + "Task Help" + Reset + " » " + Blue + "task start all" + Reset + " - Starts all tasks" + Reset)
+		fmt.Println(Green + "Task Help" + Reset + " » " + Blue + "task stop all" + Reset + " - Stops all tasks" + Reset)
+		fmt.Println(Green + "Task Help" + Reset + " » " + Blue + "task stop <Task>" + Reset + " - Stop task" + Reset)
+	case "task list":
+		fmt.Println("Listing all tasks...")
+	case "task add":
+		fmt.Println("Adding new task...")
+	case "task remove":
+		fmt.Println("Removing task...")
+	case "task remove all":
+		fmt.Println("Removing all tasks...")
+	case "task edit":
+		fmt.Println("Editing task...")
+	case "task info":
+		fmt.Println("Showing task info...")
+	case "task info all":
+		fmt.Println("Showing all tasks info...")
+	case "task start":
+		fmt.Println("Starting task...")
+	case "task start all":
+		fmt.Println("Starting all tasks...")
+	case "task stop":
+		fmt.Println("Stopping task...")
+	case "task stop all":
+		fmt.Println("Stopping all tasks...")
+
+	/**case "your name":
+	name, _ := getInput(">>", reader)
+	name1 := name
+	fmt.Println(name1)**/
 	default:
-		println(Red + "This command is not available. Type " + Yellow + "task help " + Red + "to see the commands.")
+		println(Yellow + opt + Red + " is not available. Type " + Yellow + "task help " + Red + "to see the commands.")
 	}
 
 }
