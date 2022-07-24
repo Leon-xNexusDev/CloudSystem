@@ -15,6 +15,8 @@ func getInput(prompt string, r *bufio.Reader) (string, error) {
 	return strings.TrimSpace(input), err
 }
 
+var reader = bufio.NewReader(os.Stdin)
+
 func CheckTaskInput() {
 
 	var Reset = "\033[0m"
@@ -24,7 +26,6 @@ func CheckTaskInput() {
 	var Green = "\033[32m"
 	var Yellow = "\033[33m"
 
-	reader := bufio.NewReader(os.Stdin)
 	hostName, _ := os.Hostname()
 	userName, _ := user.Current()
 
@@ -46,9 +47,10 @@ func CheckTaskInput() {
 		fmt.Println(Green + "task start all" + Reset + " - Starts all tasks")
 		fmt.Println(Green + "task stop all" + Reset + " - Stops all tasks")
 		fmt.Println(Green + "task stop <Task>" + Reset + " - Stop task")
-	/*case "your name":
-	name, _ := getInput(">>", reader)
-	fmt.Println(name)*/
+	case "your name":
+		name, _ := getInput(">>", reader)
+		name1 := name
+		fmt.Println(name1)
 	default:
 		println(Red + "This command is not available. Type " + Yellow + "task help " + Red + "to see the commands.")
 	}
