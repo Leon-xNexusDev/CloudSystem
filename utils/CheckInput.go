@@ -47,7 +47,6 @@ func CheckInput() {
 		fmt.Println("Version v1.0 alpha")
 		fmt.Println("Author: Leon-xNexusDev & Gamer_Bjoern")
 		fmt.Println("Discord: https://discord.gg/QWQWQWQ") //TODO Add discord link
-		fmt.Println("License: GNU GPLv3")
 		fmt.Println("Copyright: 2022")
 		fmt.Println("All rights reserved.")
 	/*case "your name":
