@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	utils.SendASCI()
+	utils.SendASCII()
 	for {
 		utils.CheckInput()
 		task.CheckTaskInput()
