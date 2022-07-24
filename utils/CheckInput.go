@@ -15,6 +15,8 @@ func getInput(prompt string, r *bufio.Reader) (string, error) {
 	return strings.TrimSpace(input), err
 }
 
+var reader = bufio.NewReader(os.Stdin)
+
 func CheckInput() {
 
 	var Reset = "\033[0m"
@@ -24,7 +26,6 @@ func CheckInput() {
 	var Green = "\033[32m"
 	var Yellow = "\033[33m"
 
-	reader := bufio.NewReader(os.Stdin)
 	hostName, _ := os.Hostname()
 	userName, _ := user.Current()
 
