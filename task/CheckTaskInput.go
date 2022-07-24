@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"os/exec"
 	"os/user"
 	"strings"
 )
@@ -47,6 +48,8 @@ func CheckTaskInput() {
 		fmt.Println(Green + "task start all" + Reset + " - Starts all tasks")
 		fmt.Println(Green + "task stop all" + Reset + " - Stops all tasks")
 		fmt.Println(Green + "task stop <Task>" + Reset + " - Stop task")
+	case "task start":
+		exec.Command("java -jar spigot-1.12.jar")
 	case "your name":
 		name, _ := getInput(">>", reader)
 		name1 := name
