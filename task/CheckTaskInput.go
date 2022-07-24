@@ -52,7 +52,7 @@ func CheckTaskInput() {
 		name1 := name
 		fmt.Println(name1)
 	default:
-		println(Red + "Unknown Command: " + opt + ". Type " + Yellow + "cloud help " + Red + "to see the commands." + Reset)
+		println(Red + "Unknown Command: " + Green + opt + Red + ". Type " + Yellow + "cloud help " + Red + "to see the commands." + Reset)
 	}
 
 }
